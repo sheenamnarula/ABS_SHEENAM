@@ -11,29 +11,31 @@ class App extends Component
   constructor()
   {
     super();
-    this.state={"searchInput":"","movieArray":[],"flag":false};
-    this.handleChange=this.handleChange.bind(this);
+    this.state={"searchInput":"","movieArray":[],"flag":false}; // setting initial state in which inputs are having null values
+    this.handleChange=this.handleChange.bind(this);              /* binding functions which are used*/ 
     this.fetchMovieList=this.fetchMovieList.bind(this);
   }
-
-  handleChange(e)
+// function to change the state after getting value from input field
+  handleChange(e)                  
   {
     this.setState({searchInput: e.target.value});
   }
+  // function to call api and  get movies list
   fetchMovieList(moviename) 
   {
-    let movieName = "";
-    if(moviename=="")
+    let movieName = "";  // movieName acts as the title of a movie
+    if(moviename=="")  // checking the null condition
     {
-      movieName = "titanic"
-    }
+      movieName = "titanic" // if null, then default movie titanic will be displayed
+    } 
     else
     {
-    movieName = moviename;
+    movieName = moviename;  // value from input
 }
   
-  const path = 'http://www.omdbapi.com/?s='+ movieName;
+  const path = 'http://www.omdbapi.com/?s='+ movieName;  // url to be passed by concatinating title of the movie
     this.setState({flag: true});
+
     $.ajax({
     
     url: path,
@@ -44,7 +46,7 @@ class App extends Component
     success : function(data){
 
     console.log(data.Search);
-    this.setState({movieArray:data.Search});
+    this.setState({movieArray:data.Search}); // after getting data from ajax call,data is to be pushed in an array
   
     }.bind(this),
     error: function(err){
