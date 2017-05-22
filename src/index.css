@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  font-family: sans-serif;
+}
+
+#search
+{
+    background-color: #eaf8fc;
+    /*background-image: linear-gradient(#fff, #d4e8ec);*/
+    border-radius: 35px;    
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c4d9df #a4c3ca #83afb7;            
+    width: 500px;
+    height: 55px;
+    padding: 10px;
+    margin: 100px auto 50px;
+    margin-top: 20px;
+    overflow: hidden; /* Clear floats */
+}
+
+#btn{
+	 border-color: #c4d9df #a4c3ca #83afb7;            
+    width: 100px;
+    height: 35px;
+    padding: 10px;
+ 	border-radius: 35px;
+    margin-top: 50px;
+    margin-right:800px;
+}
+#heading
+{
+    color: aqua;
+}
+#division
+{
+    padding-top: 100px;
+    background-color: black;
+}
+#title
+{
+    color: green;
+
+}
+#year
+{
+    color :green;
+}
+#spantitle
+{
+    color :red;
+}
+#spanyear
+{
+    color :red;
+}
